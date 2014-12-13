@@ -1,4 +1,6 @@
-package com.example.fasson;
+package com.ysk.fasson;
+
+import com.ysk.fasson.R;
 
 import android.os.Bundle;
 import android.app.Activity;
