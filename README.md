@@ -1,10 +1,6 @@
 # Develop
 ----------
 
-## TODO
-* 2014/12/13  
-hogehoge
-
 ## Member 
 ### [masa0226](https://github.com/masa0226)
 <p><img src="https://avatars0.githubusercontent.com/u/8470189?v=3&s=460" alt="masa_img" title="masa_img" width="200" height="200"/></p>
