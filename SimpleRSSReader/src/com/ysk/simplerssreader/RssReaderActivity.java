@@ -1,22 +1,30 @@
 package com.ysk.simplerssreader;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
+import java.util.ArrayList;
 
-public class RssReaderActivity extends Activity {
+import android.os.Bundle;
+import android.app.ListActivity;
+
+//RssReaderActivity.java
+public class RssReaderActivity extends ListActivity {
+	private ArrayList<Item> mItems;
+	private RssListAdapter mAdapter;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_rss_reader);
-	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.rss_reader, menu);
-		return true;
-	}
+		// Itemオブジェクトを保持するためのリストを生成し、アダプタに追加する
+		mItems = new ArrayList<Item>();
+		mAdapter = new RssListAdapter(this, mItems);
 
+		// アダプタをリストビューにセットする
+		setListAdapter(mAdapter);
+
+		// サンプル用に空のItemオブジェクトをセットする
+		for (int i = 0; i < 10; i++) {
+			mAdapter.add(new Item());
+		}
+	}
 }
